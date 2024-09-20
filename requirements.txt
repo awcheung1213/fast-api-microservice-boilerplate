@@ -1,0 +1,10 @@
+ddtrace
+fastapi
+google-api-core
+google-auth
+google-cloud-core
+google-cloud-secret-manager
+pydantic
+pydantic-settings
+sqlalchemy
+uvicorn
