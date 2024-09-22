@@ -4,6 +4,7 @@ from typing import Annotated, Dict, List, Optional
 from uuid import UUID
 
 
+#TODO: Replace placeholder
 class SampleModel(BaseModel): #A sample model containing various types of data for a product order
     id: UUID5 | Annotated[str, AfterValidator(lambda x: UUID(x, version=5))]
     name: str = Field(..., description="A string value representing the name")

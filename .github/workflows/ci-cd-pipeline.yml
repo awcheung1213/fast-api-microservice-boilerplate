@@ -1,0 +1,15 @@
+name: Fast API Microservice Boilerplate CI/CD Pipeline #TODO: Replace placeholder
+
+on:
+    pull_request:
+        branches:
+            -main2
+
+env:
+    REDIS_HOST: "" #TODO: Replace placeholder
+    REDIS_PORT: "" #TODO: Replace placeholder
+
+jobs:
+    build:
+        name: Build
+        

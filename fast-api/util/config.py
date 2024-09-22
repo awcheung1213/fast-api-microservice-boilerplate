@@ -1,4 +1,5 @@
 from app._version import __version__
+from os import environ
 from pydantic import field_validator, SecretStr
 from pydantic_settings import BaseSettings, PydanticBaseSettingsSource
 from secret_manager import SecretManagerConfigSettingsSource
@@ -52,6 +53,8 @@ class Config(BaseSettings):
     APPLICATION_NAME: str = "Fast API Microservice Boilerplate" #TODO: Replace placeholder
     ENVIRONMENT: str = "test"
     DB_USER: str = "postgres"
+    REDIS_HOST: str = environ.get("REDIS_HOST")
+    REDIS_PORT: int = int(environ.get("REDIS_PORT"))
 
     datadog: DatadogServiceConfig = DatadogServiceConfig()
     secrets: SecretsConfig = SecretsConfig()

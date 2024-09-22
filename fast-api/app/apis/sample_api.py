@@ -9,6 +9,7 @@ logger = logging.getLogger(__name__)
 router = APIRouter()
 
 
+#TODO: Replace placeholder
 @router.get('/',
             response_class=ORJSONResponse,
             status_code=200,

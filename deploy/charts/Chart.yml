@@ -1,0 +1,4 @@
+apiVersion: v2
+name: fast-api-microservice-boilerplate #TODO: Replace placeholder
+version: 0.0.1 #TODO: Replace placeholder
+description: Fast API Microservice Boilerplate #TODO: Replace placeholder
