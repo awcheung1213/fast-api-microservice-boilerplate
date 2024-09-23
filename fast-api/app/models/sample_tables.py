@@ -2,8 +2,7 @@ from sqlalchemy import Boolean, Column, DateTime, Integer, func, MetaData, Numer
 from sqlalchemy.dialects.postgresql import JSONB, UUID
 
 
-#TODO: Replace placeholder
-sample_table_1 = Table(
+sample_table_1 = Table( #TODO: Replace placeholder
     Column('id', UUID(as_uuid=True), primary_key=True),
     Column('updated', DateTime(timezone=True), nullable=False, server_default=func.now()),
     Column('is_available', Boolean, default=False),
@@ -13,8 +12,7 @@ sample_table_1 = Table(
 )
 
 
-#TODO: Replace placeholder
-sample_table_2 = Table(
+sample_table_2 = Table( #TODO: Replace placeholder
     Column('id', UUID(as_uuid=True), primary_key=True),
     Column('created', DateTime(timezone=True), nullable=False, server_default=func.now()),
     Column('quantity', Integer, nullable=False),

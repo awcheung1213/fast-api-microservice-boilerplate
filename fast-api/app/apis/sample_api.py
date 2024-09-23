@@ -9,12 +9,11 @@ logger = logging.getLogger(__name__)
 router = APIRouter()
 
 
-#TODO: Replace placeholder
 @router.get('/',
             response_class=ORJSONResponse,
             status_code=200,
             description='Sample GET endpoint')
-async def sample_get(
+async def sample_get( #TODO: Replace placeholder
     req: Request
 ):
     logger.info(f'GET {req.url}, params={req.query_params}, body={await req.body()}')

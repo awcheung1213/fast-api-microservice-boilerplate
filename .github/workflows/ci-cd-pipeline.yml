@@ -3,7 +3,7 @@ name: Fast API Microservice Boilerplate CI/CD Pipeline #TODO: Replace placeholde
 on:
     pull_request:
         branches:
-            -main2
+            -main
 
 env:
     REDIS_HOST: "" #TODO: Replace placeholder
@@ -11,5 +11,23 @@ env:
 
 jobs:
     build:
-        name: Build
+        uses: ./.github/workflows/build-template.yml
+
+    test:
+        uses: ./.github/workflows/test-template.yml
+    
+    terraform:
+        uses: ./.github/workflows/terraform-template.yml
+    
+    maintenance:
+        uses: ./.github/workflows/maintenance-template.yml
+    
+    upgrade-db:
+        uses: ./.github/workflows/upgrade-db-template.yml
+    
+    deploy:
+        uses: ./.github/workflows/deploy-template.yml
+    
+    clean-up:
+        uses: ./.github/workflows/clean-up-template.yml
         

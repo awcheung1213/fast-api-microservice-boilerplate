@@ -1,0 +1,20 @@
+# Ignore the following to reduce image size and build time
+
+# Cache
+__pycache__/
+**/__pycache__
+.cache
+*.pyc
+test/.cache
+
+# Virtual Env
+venv/
+
+# IDE
+.idea
+
+# Testing
+.coverage
+
+.git/
+build

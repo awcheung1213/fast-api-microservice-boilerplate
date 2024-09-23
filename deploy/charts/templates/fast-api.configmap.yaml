@@ -1,0 +1,11 @@
+apiVersion: v2
+kind: ConfigMap
+metadata:
+  name: "{{ .Release.Name }}-configmap"
+  annotations:
+    meta.helm.sh/release-name: "{{ .Release.Name }}"
+    meta.helm.sh/release-namespace: "{{ .Release.Namespace }}"
+  labels:
+    app.kubernetes.io/managed-by: Helm
+data:
+{{ toYaml .Values.envConfig | indent 2 }}

@@ -4,9 +4,7 @@ from models.sample_tables import sample_table_1, sample_table_2
 from util.sql_helpers import execute_sql
 
 
-
-#TODO: Replace placeholder
-def get_order_data(
+def get_order_data( #TODO: Replace placeholder
         conn: Connection,
         order_number: int
 ) -> SampleModel:
